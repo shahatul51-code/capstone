@@ -3,7 +3,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
-const giftRoutes = require("./routes/giftRoutes");   // Import gift routes
+// Import routes
+const giftRoutes = require("./routes/giftRoutes");   
 const searchRoutes = require("./routes/searchRoutes");
 const authRoutes = require("./routes/authRoutes");
 
