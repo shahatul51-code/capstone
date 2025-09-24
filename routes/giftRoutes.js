@@ -1,18 +1,17 @@
 // /routes/giftRoutes.js
 const express = require("express");
 const router = express.Router();
-const mongoose = require("../models/db"); // <-- Connects to the database
+const mongoose = require("../models/db"); // DB connection
 
-// Example Gift Schema & Model
+// Gift schema and model
 const giftSchema = new mongoose.Schema({
   name: String,
   price: Number,
   category: String,
 });
-
 const Gift = mongoose.model("Gift", giftSchema);
 
-// GET all gifts
+// Route: GET /api/gifts  → returns all gifts
 router.get("/", async (req, res) => {
   try {
     const gifts = await Gift.find();
@@ -22,11 +21,13 @@ router.get("/", async (req, res) => {
   }
 });
 
-// GET gift by ID
+// Route: GET /api/gifts/:id  → returns one gift by ID
 router.get("/:id", async (req, res) => {
   try {
     const gift = await Gift.findById(req.params.id);
-    if (!gift) return res.status(404).json({ message: "Gift not found" });
+    if (!gift) {
+      return res.status(404).json({ message: "Gift not found" });
+    }
     res.json(gift);
   } catch (err) {
     res.status(500).json({ error: err.message });
