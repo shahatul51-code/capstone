@@ -15,16 +15,21 @@ h1 {
     color: #333;
 }
 
-#gift-card {
+#registerForm, #gift-card {
     max-width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f8f8f8;
+    margin-bottom: 20px;
 }
 
-#gift-card h2 {
-    margin-top: 0;
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
 }
 
 button {
@@ -38,4 +43,26 @@ button {
 
 button:hover {
     background-color: #005bb5;
+}
+
+/* Gifts grid */
+#gifts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.gift-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.gift-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
