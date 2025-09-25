@@ -32,21 +32,33 @@ const gifts = [
     {name: "Watch", description: "Elegant wristwatch with leather strap.", price: 100.00},
 ];
 
-// ------------------ Main Page Gift Rendering ------------------
+// ------------------ Render Gifts ------------------
 const giftsContainer = document.getElementById('gifts-container');
-if (giftsContainer) {
-    gifts.forEach(gift => {
+function renderGifts(list) {
+    giftsContainer.innerHTML = '';
+    list.forEach(gift => {
         const giftDiv = document.createElement('div');
         giftDiv.className = 'gift-item';
         giftDiv.textContent = `🎁 ${gift.name}`;
         giftDiv.addEventListener('click', () => {
-            // Save selected gift and navigate to details page
             localStorage.setItem('selectedGift', JSON.stringify(gift));
             window.location.href = 'giftdetails.html';
         });
         giftsContainer.appendChild(giftDiv);
     });
 }
+renderGifts(gifts);
+
+// ------------------ Search Functionality ------------------
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const filtered = gifts.filter(gift => 
+        gift.name.toLowerCase().includes(query) || 
+        gift.description.toLowerCase().includes(query)
+    );
+    renderGifts(filtered);
+});
 
 // ------------------ Gift Details Page Rendering ------------------
 const giftName = document.getElementById('gift-name');
