@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GiftLink - Main Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .gift-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .gift-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .gift-card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .gift-card h3 {
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎁 GiftLink - All Gifts</h1>
+    <p>Browse our collection before login</p>
+  </header>
+
+  <section class="gift-list">
+    <div class="gift-card">
+      <img src="https://via.placeholder.com/200x150?text=Teddy+Bear" alt="Teddy Bear">
+      <h3>Teddy Bear</h3>
+      <p>$20</p>
+    </div>
+    <div class="gift-card">
+      <img src="https://via.placeholder.com/200x150?text=Flower+Bouquet" alt="Flower Bouquet">
+      <h3>Flower Bouquet</h3>
+      <p>$15</p>
+    </div>
+    <div class="gift-card">
+      <img src="https://via.placeholder.com/200x150?text=Chocolate+Box" alt="Chocolate Box">
+      <h3>Chocolate Box</h3>
+      <p>$12</p>
+    </div>
+    <div class="gift-card">
+      <img src="https://via.placeholder.com/200x150?text=Smart+Watch" alt="Smart Watch">
+      <h3>Smart Watch</h3>
+      <p>$80</p>
+    </div>
+    <div class="gift-card">
+      <img src="https://via.placeholder.com/200x150?text=Perfume" alt="Perfume">
+      <h3>Perfume</h3>
+      <p>$35</p>
+    </div>
+    <div class="gift-card">
+      <img src="https://via.placeholder.com/200x150?text=Gift+Card" alt="Gift Card">
+      <h3>Amazon Gift Card</h3>
+      <p>$25</p>
+    </div>
+  </section>
+</body>
+</html>
