@@ -1,3 +1,5 @@
+const navbarWelcome = document.getElementById('welcome');
+
 document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault(); // prevent page reload
 
@@ -5,5 +7,9 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    alert(`User about to be registered:\nUsername: ${username}\nEmail: ${email}`);
+    // Simulate registering user
+    alert(`User registered:\nUsername: ${username}\nEmail: ${email}`);
+
+    // Show username in navbar as "logged-in"
+    navbarWelcome.textContent = `Welcome, ${username}!`;
 });
