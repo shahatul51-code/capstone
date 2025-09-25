@@ -15,19 +15,16 @@ h1 {
     color: #333;
 }
 
-form {
+#gift-card {
     max-width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    background-color: #f8f8f8;
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #aaa;
+#gift-card h2 {
+    margin-top: 0;
 }
 
 button {
