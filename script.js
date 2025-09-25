@@ -1,10 +1,9 @@
-// Example: dynamically add a click event to gifts
-document.addEventListener('DOMContentLoaded', () => {
-    const gifts = document.querySelectorAll('#gift-list li');
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent page reload
 
-    gifts.forEach(gift => {
-        gift.addEventListener('click', () => {
-            alert(`You clicked on ${gift.textContent}`);
-        });
-    });
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    alert(`User about to be registered:\nUsername: ${username}\nEmail: ${email}`);
 });
