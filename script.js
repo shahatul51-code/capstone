@@ -1,15 +1,20 @@
+// Navbar login simulation (optional)
 const navbarWelcome = document.getElementById('welcome');
+navbarWelcome.textContent = "Welcome, Vishal!"; // Example logged-in user
 
-document.getElementById('registerForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // prevent page reload
+// Gift details
+const gift = {
+    name: "Wireless Headphones",
+    description: "High-quality wireless headphones with noise cancellation.",
+    price: 120.00
+};
 
-    const username = document.getElementById('username').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+// Populate gift details
+document.getElementById('gift-name').textContent = gift.name;
+document.getElementById('gift-description').textContent = gift.description;
+document.getElementById('gift-price').textContent = `Price: $${gift.price.toFixed(2)}`;
 
-    // Simulate registering user
-    alert(`User registered:\nUsername: ${username}\nEmail: ${email}`);
-
-    // Show username in navbar as "logged-in"
-    navbarWelcome.textContent = `Welcome, ${username}!`;
+// Buy button action
+document.getElementById('buyBtn').addEventListener('click', function() {
+    alert(`You are about to buy: ${gift.name}`);
 });
